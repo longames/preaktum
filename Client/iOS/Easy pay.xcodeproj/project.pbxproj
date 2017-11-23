@@ -7,27 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AF7DD4D31ED3AA28005C880E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DD4D21ED3AA28005C880E /* AppDelegate.swift */; };
-		AF7DD4D51ED3AA28005C880E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DD4D41ED3AA28005C880E /* ViewController.swift */; };
-		AF7DD4D81ED3AA28005C880E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7DD4D61ED3AA28005C880E /* Main.storyboard */; };
-		AF7DD4DA1ED3AA28005C880E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF7DD4D91ED3AA28005C880E /* Assets.xcassets */; };
-		AF7DD4DD1ED3AA28005C880E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7DD4DB1ED3AA28005C880E /* LaunchScreen.storyboard */; };
-		F4D077821EDC0A91001B0881 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D077811EDC0A91001B0881 /* CameraController.swift */; };
+		F4F09DB71DAF669400026BB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F09DB61DAF669400026BB2 /* AppDelegate.swift */; };
+		F4F09DBC1DAF669400026BB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F09DBA1DAF669400026BB2 /* Main.storyboard */; };
+		F4F09DBE1DAF669400026BB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4F09DBD1DAF669400026BB2 /* Assets.xcassets */; };
+		F4F09DC11DAF669400026BB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F09DBF1DAF669400026BB2 /* LaunchScreen.storyboard */; };
+		F4F09DCB1DAF6A4F00026BB2 /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F09DCA1DAF6A4F00026BB2 /* QRScannerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AF7DD4CF1ED3AA28005C880E /* Easy pay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy pay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF7DD4D21ED3AA28005C880E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF7DD4D41ED3AA28005C880E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "Easy pay/ViewController.swift"; sourceTree = "<group>"; };
-		AF7DD4D71ED3AA28005C880E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../Main.storyboard; sourceTree = "<group>"; };
-		AF7DD4D91ED3AA28005C880E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Easy pay/Assets.xcassets"; sourceTree = "<group>"; };
-		AF7DD4DC1ED3AA28005C880E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AF7DD4DE1ED3AA28005C880E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F4D077811EDC0A91001B0881 /* CameraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		F4F09DB31DAF669400026BB2 /* Easy Pay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy Pay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4F09DB61DAF669400026BB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F4F09DBB1DAF669400026BB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F4F09DBD1DAF669400026BB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F4F09DC01DAF669400026BB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F4F09DC21DAF669400026BB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4F09DCA1DAF6A4F00026BB2 /* QRScannerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AF7DD4CC1ED3AA28005C880E /* Frameworks */ = {
+		F4F09DB01DAF669400026BB2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,73 +35,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AF7DD4C61ED3AA28005C880E = {
+		F4F09DAA1DAF669400026BB2 = {
 			isa = PBXGroup;
 			children = (
-				F4D077811EDC0A91001B0881 /* CameraController.swift */,
-				AF7DD4D61ED3AA28005C880E /* Main.storyboard */,
-				AF7DD4D41ED3AA28005C880E /* ViewController.swift */,
-				AF7DD4D91ED3AA28005C880E /* Assets.xcassets */,
-				AF7DD4D11ED3AA28005C880E /* Easy pay */,
-				AF7DD4D01ED3AA28005C880E /* Products */,
+				F4F09DB51DAF669400026BB2 /* QRCodeReader */,
+				F4F09DB41DAF669400026BB2 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		AF7DD4D01ED3AA28005C880E /* Products */ = {
+		F4F09DB41DAF669400026BB2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AF7DD4CF1ED3AA28005C880E /* Easy pay.app */,
+				F4F09DB31DAF669400026BB2 /* Easy Pay.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AF7DD4D11ED3AA28005C880E /* Easy pay */ = {
+		F4F09DB51DAF669400026BB2 /* QRCodeReader */ = {
 			isa = PBXGroup;
 			children = (
-				AF7DD4D21ED3AA28005C880E /* AppDelegate.swift */,
-				AF7DD4DB1ED3AA28005C880E /* LaunchScreen.storyboard */,
-				AF7DD4DE1ED3AA28005C880E /* Info.plist */,
+				F4F09DB61DAF669400026BB2 /* AppDelegate.swift */,
+				F4F09DBA1DAF669400026BB2 /* Main.storyboard */,
+				F4F09DBD1DAF669400026BB2 /* Assets.xcassets */,
+				F4F09DBF1DAF669400026BB2 /* LaunchScreen.storyboard */,
+				F4F09DC21DAF669400026BB2 /* Info.plist */,
+				F4F09DCA1DAF6A4F00026BB2 /* QRScannerController.swift */,
 			);
-			path = "Easy pay";
+			path = QRCodeReader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AF7DD4CE1ED3AA28005C880E /* Easy pay */ = {
+		F4F09DB21DAF669400026BB2 /* Easy Pay */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AF7DD4E11ED3AA28005C880E /* Build configuration list for PBXNativeTarget "Easy pay" */;
+			buildConfigurationList = F4F09DC51DAF669400026BB2 /* Build configuration list for PBXNativeTarget "Easy Pay" */;
 			buildPhases = (
-				AF7DD4CB1ED3AA28005C880E /* Sources */,
-				AF7DD4CC1ED3AA28005C880E /* Frameworks */,
-				AF7DD4CD1ED3AA28005C880E /* Resources */,
+				F4F09DAF1DAF669400026BB2 /* Sources */,
+				F4F09DB01DAF669400026BB2 /* Frameworks */,
+				F4F09DB11DAF669400026BB2 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Easy pay";
-			productName = "AV Foundation";
-			productReference = AF7DD4CF1ED3AA28005C880E /* Easy pay.app */;
+			name = "Easy Pay";
+			productName = QRCodeReader;
+			productReference = F4F09DB31DAF669400026BB2 /* Easy Pay.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AF7DD4C71ED3AA28005C880E /* Project object */ = {
+		F4F09DAB1DAF669400026BB2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
-				ORGANIZATIONNAME = "Pranjal Satija";
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = AppCoda;
 				TargetAttributes = {
-					AF7DD4CE1ED3AA28005C880E = {
-						CreatedOnToolsVersion = 8.3.2;
+					F4F09DB21DAF669400026BB2 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = ESY9U785K8;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = AF7DD4CA1ED3AA28005C880E /* Build configuration list for PBXProject "Easy pay" */;
+			buildConfigurationList = F4F09DAE1DAF669400026BB2 /* Build configuration list for PBXProject "Easy Pay" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -111,56 +110,54 @@
 				en,
 				Base,
 			);
-			mainGroup = AF7DD4C61ED3AA28005C880E;
-			productRefGroup = AF7DD4D01ED3AA28005C880E /* Products */;
+			mainGroup = F4F09DAA1DAF669400026BB2;
+			productRefGroup = F4F09DB41DAF669400026BB2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AF7DD4CE1ED3AA28005C880E /* Easy pay */,
+				F4F09DB21DAF669400026BB2 /* Easy Pay */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AF7DD4CD1ED3AA28005C880E /* Resources */ = {
+		F4F09DB11DAF669400026BB2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF7DD4DD1ED3AA28005C880E /* LaunchScreen.storyboard in Resources */,
-				AF7DD4DA1ED3AA28005C880E /* Assets.xcassets in Resources */,
-				AF7DD4D81ED3AA28005C880E /* Main.storyboard in Resources */,
+				F4F09DC11DAF669400026BB2 /* LaunchScreen.storyboard in Resources */,
+				F4F09DBE1DAF669400026BB2 /* Assets.xcassets in Resources */,
+				F4F09DBC1DAF669400026BB2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		AF7DD4CB1ED3AA28005C880E /* Sources */ = {
+		F4F09DAF1DAF669400026BB2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4D077821EDC0A91001B0881 /* CameraController.swift in Sources */,
-				AF7DD4D51ED3AA28005C880E /* ViewController.swift in Sources */,
-				AF7DD4D31ED3AA28005C880E /* AppDelegate.swift in Sources */,
+				F4F09DB71DAF669400026BB2 /* AppDelegate.swift in Sources */,
+				F4F09DCB1DAF6A4F00026BB2 /* QRScannerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AF7DD4D61ED3AA28005C880E /* Main.storyboard */ = {
+		F4F09DBA1DAF669400026BB2 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AF7DD4D71ED3AA28005C880E /* Base */,
+				F4F09DBB1DAF669400026BB2 /* Base */,
 			);
 			name = Main.storyboard;
-			path = "Easy pay";
 			sourceTree = "<group>";
 		};
-		AF7DD4DB1ED3AA28005C880E /* LaunchScreen.storyboard */ = {
+		F4F09DBF1DAF669400026BB2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AF7DD4DC1ED3AA28005C880E /* Base */,
+				F4F09DC01DAF669400026BB2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -168,17 +165,18 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		AF7DD4DF1ED3AA28005C880E /* Debug */ = {
+		F4F09DC31DAF669400026BB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -186,8 +184,13 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -209,26 +212,28 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		AF7DD4E01ED3AA28005C880E /* Release */ = {
+		F4F09DC41DAF669400026BB2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -236,8 +241,13 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -253,62 +263,65 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		AF7DD4E21ED3AA28005C880E /* Debug */ = {
+		F4F09DC61DAF669400026BB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "$(SRCROOT)/Easy pay/Info.plist";
+				DEVELOPMENT_TEAM = ESY9U785K8;
+				INFOPLIST_FILE = QRCodeReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.avfoundationdemo;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nikita-aplin.Easy-pay";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
-		AF7DD4E31ED3AA28005C880E /* Release */ = {
+		F4F09DC71DAF669400026BB2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "$(SRCROOT)/Easy pay/Info.plist";
+				DEVELOPMENT_TEAM = ESY9U785K8;
+				INFOPLIST_FILE = QRCodeReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.avfoundationdemo;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nikita-aplin.Easy-pay";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AF7DD4CA1ED3AA28005C880E /* Build configuration list for PBXProject "Easy pay" */ = {
+		F4F09DAE1DAF669400026BB2 /* Build configuration list for PBXProject "Easy Pay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AF7DD4DF1ED3AA28005C880E /* Debug */,
-				AF7DD4E01ED3AA28005C880E /* Release */,
+				F4F09DC31DAF669400026BB2 /* Debug */,
+				F4F09DC41DAF669400026BB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AF7DD4E11ED3AA28005C880E /* Build configuration list for PBXNativeTarget "Easy pay" */ = {
+		F4F09DC51DAF669400026BB2 /* Build configuration list for PBXNativeTarget "Easy Pay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AF7DD4E21ED3AA28005C880E /* Debug */,
-				AF7DD4E31ED3AA28005C880E /* Release */,
+				F4F09DC61DAF669400026BB2 /* Debug */,
+				F4F09DC71DAF669400026BB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = AF7DD4C71ED3AA28005C880E /* Project object */;
+	rootObject = F4F09DAB1DAF669400026BB2 /* Project object */;
 }
