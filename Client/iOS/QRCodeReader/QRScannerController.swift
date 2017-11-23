@@ -119,8 +119,8 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
                 messageLabel.text = metadataObj.stringValue
                 //productsStruct.products[0] = metadataObj.stringValue!
                 // Create the alert controller
-                let alertController = UIAlertController(title: "Title", message: "Message", preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
+                let alertController = UIAlertController(title: "Title", message: "Price: $100", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "Add", style: UIAlertActionStyle.default) {
                     UIAlertAction in
                     productsStruct.products[productsStruct.countP] = metadataObj.stringValue!
                     productsStruct.countP += 1
