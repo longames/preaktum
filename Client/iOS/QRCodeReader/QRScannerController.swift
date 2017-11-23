@@ -14,6 +14,10 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
     @IBOutlet var messageLabel:UILabel!
     @IBOutlet var topbar: UIView!
     
+    struct productsStruct {
+        static var products = ["testString"]
+        static var countP = 0
+    }
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
@@ -78,7 +82,7 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
             
         } catch {
             // If any error occurs, simply print it out and don't continue any more.
-            print(error)
+            //print(error)
             return
         }
     }
@@ -88,19 +92,21 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func checkArray(_ sender: Any) {
+        for elem in productsStruct.products{
+            print(elem)
+            print(productsStruct.countP)
+        }
+    }
     // MARK: - AVCaptureMetadataOutputObjectsDelegate Methods
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-        var products = ["test"]
-        var count = 0
         // Check if the metadataObjects array is not nil and it contains at least one object.
         if metadataObjects == nil || metadataObjects.count == 0 {
             qrCodeFrameView?.frame = CGRect.zero
             messageLabel.text = "No QR/barcode is detected"
             return
         }
-        
         // Get the metadata object.
         let metadataObj = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
         
@@ -111,11 +117,25 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
             
             if metadataObj.stringValue != nil {
                 messageLabel.text = metadataObj.stringValue
-                count+=1
-                products[0] = metadataObj.stringValue!
-                let alert = UIAlertController(title: "Alert", message: products[0], preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
+                //productsStruct.products[0] = metadataObj.stringValue!
+                // Create the alert controller
+                let alertController = UIAlertController(title: "Title", message: "Message", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
+                    UIAlertAction in
+                    productsStruct.products[productsStruct.countP] = metadataObj.stringValue!
+                    productsStruct.countP += 1
+                    self.captureSession?.startRunning()
+                    self.messageLabel.text = "No QR/barcode is detected"
+                }
+                let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) {
+                    UIAlertAction in
+                    self.captureSession?.startRunning()
+                    self.messageLabel.text = "No QR/barcode is detected"
+                }
+                alertController.addAction(okAction)
+                alertController.addAction(cancelAction)
+                self.present(alertController, animated: true, completion: nil)
+                captureSession?.stopRunning()
             }
         }
     }

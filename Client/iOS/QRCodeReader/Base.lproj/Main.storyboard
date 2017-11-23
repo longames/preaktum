@@ -12,7 +12,7 @@
         <!--Scanner Controller-->
         <scene sceneID="6su-PY-OE1">
             <objects>
-                <viewController id="B0K-bi-dGX" customClass="QRScannerController" customModule="QRCodeReader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="B0K-bi-dGX" customClass="QRScannerController" customModule="Easy_Pay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="10Y-Tp-fy2"/>
                         <viewControllerLayoutGuide type="bottom" id="irj-0H-Q0u"/>
@@ -30,6 +30,14 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uyb-lq-xGK">
+                                        <rect key="frame" x="276" y="12" width="83" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Check array"/>
+                                        <connections>
+                                            <action selector="checkArray:" destination="B0K-bi-dGX" eventType="touchUpInside" id="pSY-cs-oXM"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
