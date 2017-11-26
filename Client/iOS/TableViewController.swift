@@ -12,8 +12,8 @@ class TableViewController: UITableViewController {
     var tableData = QRScannerController.global.products
     override func viewDidLoad() {
         super.viewDidLoad()
-        if(global.products[0] == "text"){
-            global.products.removeFirst()
+        if(tableData[0] == "text"){
+            tableData.removeFirst()
         }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
