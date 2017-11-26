@@ -18,10 +18,8 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
     @IBOutlet weak var imageRecOutlet: UILabel!
     @IBOutlet weak var tableView: UITableView!
     struct global {
-        static var products = ["test"]
+        static var products = ["text"]
     }
-    var products = ["test"]
-    
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
@@ -39,7 +37,6 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        products.removeFirst()
         //global.products.removeFirst()
         //print(global.products[0])
         tableView.isHidden = true
@@ -85,10 +82,10 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
             qrCodeFrameView = UIView()
             
             if let qrCodeFrameView = qrCodeFrameView {
-                qrCodeFrameView.layer.borderColor = UIColor.green.cgColor
+                /*qrCodeFrameView.layer.borderColor = UIColor.green.cgColor
                 qrCodeFrameView.layer.borderWidth = 2
                 view.addSubview(qrCodeFrameView)
-                view.bringSubview(toFront: qrCodeFrameView)
+                view.bringSubview(toFront: qrCodeFrameView)*/
             }
             
         } catch {
@@ -104,12 +101,6 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func checkArray(_ sender: Any) {
-        for elem in products{
-            print(elem)
-        }
-    }
     @IBAction func showTableView(_ sender: Any) {
         /*if(tableView.isHidden){
             self.captureSession?.stopRunning()
@@ -120,24 +111,6 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
         }*/
     }
     // MARK: - AVCaptureMetadataOutputObjectsDelegate Methods
-    func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-    
-    func tableView1(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return products.count
-    }
-    
-    
-    func tableView2(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath)
-        cell.textLabel?.text = products[indexPath.row]
-        // Configure the cell...
-        
-        return cell
-    }
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         // Check if the metadataObjects array is not nil and it contains at least one object.
         if metadataObjects == nil || metadataObjects.count == 0 {
@@ -159,17 +132,22 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
                 let alertController = UIAlertController(title: "Title", message: "Price: $100", preferredStyle: .alert)
                 let okAction = UIAlertAction(title: "Add", style: UIAlertActionStyle.default) {
                     UIAlertAction in
-                    self.products.append(metadataObj.stringValue!)
+                    if(global.products[0] == "text"){
+                        global.products.removeFirst()
+                    }
+                    global.products.append(metadataObj.stringValue!)
                     let json: [String: Any] = ["type": "add",
                                                "products": ["id":metadataObj.stringValue!]]
                     self.getRequest(json: json)
-                    global.products = self.products
                     //productsStruct.countP += 1å
                     self.captureSession?.startRunning()
                     self.messageLabel.text = "No QR/barcode is detected"
                 }
                 let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) {
                     UIAlertAction in
+                    for x in global.products{
+                        print(x)
+                    }
                     self.captureSession?.startRunning()
                     self.messageLabel.text = "No QR/barcode is detected"
                 }

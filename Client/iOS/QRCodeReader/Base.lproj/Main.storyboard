@@ -128,6 +128,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ZgH-d7-ZHh">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Og2-Ba-ikF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="qmN-2A-7rh" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4aM-Zx-YP3">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -137,7 +138,6 @@
                         <segue destination="6fv-lN-qjZ" kind="relationship" relationship="rootViewController" id="02v-KS-b1D"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Og2-Ba-ikF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1070" y="931"/>
         </scene>
@@ -150,7 +150,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FMj-Tv-DPQ">
-                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <rect key="frame" x="0.0" y="113" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Купить"/>
                             <connections>
@@ -158,22 +158,22 @@
                             </connections>
                         </button>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell" textLabel="Gf6-AV-jm3" detailTextLabel="ijF-ip-GbC" imageView="fhF-b5-QxQ" style="IBUITableViewCellStyleValue1" id="PKu-c6-qb5">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell" textLabel="Gf6-AV-jm3" detailTextLabel="ijF-ip-GbC" imageView="fhF-b5-QxQ" rowHeight="85" style="IBUITableViewCellStyleValue1" id="PKu-c6-qb5">
+                                <rect key="frame" x="0.0" y="28" width="375" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PKu-c6-qb5" id="NKt-N0-d3l">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="84.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gf6-AV-jm3">
-                                            <rect key="frame" x="16" y="12" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="16" y="32" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ijF-ip-GbC">
-                                            <rect key="frame" x="315" y="12" width="44" height="20.5"/>
+                                            <rect key="frame" x="315" y="32" width="44" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -194,14 +194,14 @@
                     <navigationItem key="navigationItem" title="Корзина" id="FbO-zX-zAo">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="zNv-uj-gaA">
                             <connections>
-                                <segue destination="B0K-bi-dGX" kind="show" id="YSZ-OP-Gp3"/>
+                                <segue destination="B0K-bi-dGX" kind="showDetail" id="vMD-9n-PyP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SbQ-K1-V20" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1311" y="206"/>
+            <point key="canvasLocation" x="1309.5999999999999" y="205.54722638680661"/>
         </scene>
     </scenes>
 </document>

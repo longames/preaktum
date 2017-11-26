@@ -42,15 +42,18 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath)
+        cell.textLabel?.lineBreakMode = .byWordWrapping
+        cell.textLabel?.numberOfLines = 3
         cell.detailTextLabel?.text = "100$"
         cell.imageView?.image = #imageLiteral(resourceName: "potato_head.jpeg")
-        cell.textLabel?.text = "Name " + tableData[indexPath.row]
+        cell.textLabel?.text = "Name \n" + tableData[indexPath.row]
         // Configure the cell...
-
         return cell
     }
-    
-
+    func allowMultipleLines(tableViewCell: UITableViewCell) {
+        tableViewCell.textLabel?.numberOfLines = 0
+        tableViewCell.textLabel?.lineBreakMode = .byWordWrapping
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
