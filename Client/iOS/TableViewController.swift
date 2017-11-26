@@ -19,7 +19,7 @@ class TableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    
     @IBAction func editing(_ sender: Any) {
         self.isEditing = !self.isEditing
     }
@@ -69,7 +69,38 @@ class TableViewController: UITableViewController {
         }    
     }
     */
-
+    func getRequest(json: [String: Any]) -> String{
+        let jsonData = try? JSONSerialization.data(withJSONObject: json)
+        
+        // create post request
+        let url = URL(string: "http://httpbin.org/post")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        
+        // insert json data to the request
+        request.httpBody = jsonData
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                print(error?.localizedDescription ?? "No data")
+                return
+            }
+            let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+            if let responseJSON = responseJSON as? [String: Any] {
+                print(responseJSON)
+            }
+        }
+        
+        task.resume()
+        return "123"
+    }
+    @IBAction func buyButton(_ sender: Any) {
+        print("Bought")
+        // prepare json data
+        let json: [String: Any] = ["title": "ABC",
+                                   "dict": ["1":"First", "2":"Second"]]
+        getRequest(json: json)
+    }
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
         var itemToMove = tableData[fromIndexPath.row]
