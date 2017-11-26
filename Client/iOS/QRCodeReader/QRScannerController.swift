@@ -13,11 +13,15 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
 
     @IBOutlet var messageLabel:UILabel!
     @IBOutlet var topbar: UIView!
-    
-    struct productsStruct {
-        static var products = ["testString"]
-        static var countP = 0
+    @IBOutlet weak var switchOutlet: UISwitch!
+    @IBOutlet weak var barcodeLabel: UILabel!
+    @IBOutlet weak var imageRecOutlet: UILabel!
+    @IBOutlet weak var tableView: UITableView!
+    struct global {
+        static var products = ["test"]
     }
+    var products = ["test"]
+    
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
@@ -35,7 +39,8 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //print(global.products[0])
+        tableView.isHidden = true
         // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video as the media type parameter.
         let captureDevice = AVCaptureDevice.default(for: AVMediaType.video)
         
@@ -69,7 +74,11 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
             // Move the message label and top bar to the front
             view.bringSubview(toFront: messageLabel)
             view.bringSubview(toFront: topbar)
-            
+            view.bringSubview(toFront: switchOutlet)
+            view.bringSubview(toFront: barcodeLabel)
+            view.bringSubview(toFront: imageRecOutlet)
+            view.bringSubview(toFront: tableView)
+
             // Initialize QR Code Frame to highlight the QR code
             qrCodeFrameView = UIView()
             
@@ -85,6 +94,8 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
             //print(error)
             return
         }
+        tableView.delegate = self as? UITableViewDelegate
+        tableView.dataSource = self as? UITableViewDataSource
     }
 
     override func didReceiveMemoryWarning() {
@@ -93,13 +104,38 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
     }
     
     @IBAction func checkArray(_ sender: Any) {
-        for elem in productsStruct.products{
+        for elem in products{
             print(elem)
-            print(productsStruct.countP)
         }
     }
+    @IBAction func showTableView(_ sender: Any) {
+        /*if(tableView.isHidden){
+            self.captureSession?.stopRunning()
+            tableView.isHidden = false
+        }else{
+            self.captureSession?.startRunning()
+            tableView.isHidden = true
+        }*/
+    }
     // MARK: - AVCaptureMetadataOutputObjectsDelegate Methods
+    func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
     
+    func tableView1(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return products.count
+    }
+    
+    
+    func tableView2(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath)
+        cell.textLabel?.text = products[indexPath.row]
+        // Configure the cell...
+        
+        return cell
+    }
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         // Check if the metadataObjects array is not nil and it contains at least one object.
         if metadataObjects == nil || metadataObjects.count == 0 {
@@ -117,13 +153,13 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
             
             if metadataObj.stringValue != nil {
                 messageLabel.text = metadataObj.stringValue
-                //productsStruct.products[0] = metadataObj.stringValue!
                 // Create the alert controller
                 let alertController = UIAlertController(title: "Title", message: "Price: $100", preferredStyle: .alert)
                 let okAction = UIAlertAction(title: "Add", style: UIAlertActionStyle.default) {
                     UIAlertAction in
-                    productsStruct.products[productsStruct.countP] = metadataObj.stringValue!
-                    productsStruct.countP += 1
+                    self.products.append(metadataObj.stringValue!)
+                    global.products = self.products
+                    //productsStruct.countP += 1å
                     self.captureSession?.startRunning()
                     self.messageLabel.text = "No QR/barcode is detected"
                 }
