@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		57414DDE1FCA6F7500B9BB04 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57414DDD1FCA6F7500B9BB04 /* TableViewController.swift */; };
+		57414DE01FCAD57D00B9BB04 /* potato_head.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 57414DDF1FCAD57D00B9BB04 /* potato_head.jpeg */; };
 		F4F09DB71DAF669400026BB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F09DB61DAF669400026BB2 /* AppDelegate.swift */; };
 		F4F09DBC1DAF669400026BB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F09DBA1DAF669400026BB2 /* Main.storyboard */; };
 		F4F09DBE1DAF669400026BB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4F09DBD1DAF669400026BB2 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		57414DDD1FCA6F7500B9BB04 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		57414DDF1FCAD57D00B9BB04 /* potato_head.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = potato_head.jpeg; path = ../../../../../../Downloads/potato_head.jpeg; sourceTree = "<group>"; };
 		F4F09DB31DAF669400026BB2 /* Easy Pay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy Pay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F09DB61DAF669400026BB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4F09DBB1DAF669400026BB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 		F4F09DB51DAF669400026BB2 /* QRCodeReader */ = {
 			isa = PBXGroup;
 			children = (
+				57414DDF1FCAD57D00B9BB04 /* potato_head.jpeg */,
 				F4F09DB61DAF669400026BB2 /* AppDelegate.swift */,
 				F4F09DBA1DAF669400026BB2 /* Main.storyboard */,
 				F4F09DBD1DAF669400026BB2 /* Assets.xcassets */,
@@ -130,6 +133,7 @@
 			files = (
 				F4F09DC11DAF669400026BB2 /* LaunchScreen.storyboard in Resources */,
 				F4F09DBE1DAF669400026BB2 /* Assets.xcassets in Resources */,
+				57414DE01FCAD57D00B9BB04 /* potato_head.jpeg in Resources */,
 				F4F09DBC1DAF669400026BB2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

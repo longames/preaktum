@@ -12,7 +12,6 @@ class TableViewController: UITableViewController {
     var tableData = QRScannerController.global.products
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableData.removeFirst()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -43,7 +42,9 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath)
-        cell.textLabel?.text = tableData[indexPath.row]
+        cell.detailTextLabel?.text = "100$"
+        cell.imageView?.image = #imageLiteral(resourceName: "potato_head.jpeg")
+        cell.textLabel?.text = "Name " + tableData[indexPath.row]
         // Configure the cell...
 
         return cell
@@ -97,9 +98,7 @@ class TableViewController: UITableViewController {
     @IBAction func buyButton(_ sender: Any) {
         print("Bought")
         // prepare json data
-        let json: [String: Any] = ["title": "ABC",
-                                   "dict": ["1":"First", "2":"Second"]]
-        getRequest(json: json)
+       
     }
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
