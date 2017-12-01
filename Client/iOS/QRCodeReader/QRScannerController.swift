@@ -17,6 +17,7 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
     @IBOutlet weak var barcodeLabel: UILabel!
     @IBOutlet weak var imageRecOutlet: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var shotButton: UIButton!
     struct global {
         static var products = ["text"]
     }
@@ -77,6 +78,7 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
             view.bringSubview(toFront: barcodeLabel)
             view.bringSubview(toFront: imageRecOutlet)
             view.bringSubview(toFront: tableView)
+            view.bringSubview(toFront: shotButton)
 
             // Initialize QR Code Frame to highlight the QR code
             qrCodeFrameView = UIView()
@@ -97,6 +99,9 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
         tableView.dataSource = self as? UITableViewDataSource
     }
 
+    @IBAction func shot(_ sender: Any) {
+        captureSession?.stopRunning()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -136,9 +141,9 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
                         global.products.removeFirst()
                     }
                     global.products.append(metadataObj.stringValue!)
-                    let json: [String: Any] = ["type": "add",
-                                               "products": ["id":metadataObj.stringValue!]]
+                    let json: [String: Any] = ["type": "add", "barcode": metadataObj.stringValue!]
                     self.getRequest(json: json)
+                    print(metadataObj.stringValue!)
                     //productsStruct.countP += 1å
                     self.captureSession?.startRunning()
                     self.messageLabel.text = "No QR/barcode is detected"
@@ -162,7 +167,7 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
         let jsonData = try? JSONSerialization.data(withJSONObject: json)
         
         // create post request
-        let url = URL(string: "http://httpbin.org/post")!
+        let url = URL(string: "http://13.95.174.54/server/request.php")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         
